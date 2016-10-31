@@ -1,5 +1,7 @@
-add-openstack-repo
-  cmd.run:
-    - names: rpm -ivh http://mirrors.aliyun.com/epel/epel-release-latest-7.noarch.rpm
+add-openstack-repo:
   pkg.installed:
-    - name: centos-release-openstack-mitaka
+    - names: 
+      - epel-release
+      - centos-release-openstack-mitaka
+      - python-openstackclient
+      - openstack-selinux
